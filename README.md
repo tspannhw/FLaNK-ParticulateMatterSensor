@@ -14,8 +14,27 @@ from `sr1`.`default_database`.`particles`
 
 ````
 
+### Hardware - Small
 
-### Hardware
+Enviro + Air Quality
+
+Raspberry Pi 4 Model B Rev 1.1 with 4GB RAM
+
+PMS5003 Particulate Matter Sensor with Cable
+
+* BME280
+* LTR-559
+* MICS6814
+* ADS1015
+* MEMS microphone 
+* 0.96" colour LCD
+* PMS5003
+
+
+### Enviro+ Data Stream
+
+
+### Hardware - Tiny
 
 Enviro Urban (Pico W Aboard) 
 * PMS5003I
@@ -60,3 +79,11 @@ Enviro Urban (Pico W Aboard)
 * https://dev.to/tspannhw/tracking-air-quality-with-apache-nifi-cloudera-data-science-workbench-pyspark-and-parquet-28c
 * https://www.airnow.gov//
 * https://www.airnow.gov/aqi/aqi-basics/extremely-high-levels-of-pm25/
+* https://github.com/pimoroni/enviro/blob/main/documentation/getting-started.md#provisioning
+* https://learn.pimoroni.com/article/enviro-plus-and-luftdaten-air-quality-station
+* https://learn.pimoroni.com/article/getting-started-with-enviro-plus
+* https://shop.pimoroni.com/products/pms5003-particulate-matter-sensor-with-cable?variant=29075640352851
+* https://shop.pimoroni.com/products/enviro?variant=31155658489939
+* https://github.com/pimoroni/enviroplus-python
+* https://github.com/tspannhw/FLiP-Py-Pi-EnviroPlus
+* https://github.com/tspannhw/minifi-enviroplus
