@@ -48,3 +48,15 @@ Enviro Urban (Pico W Aboard)
 * https://www.northjersey.com/story/news/health/2023/06/07/nj-air-pollution-improve-air-quality-safe-outside-today/70297470007/
 * https://shop.pimoroni.com/products/enviro-urban?variant=40056508252243
 * https://github.com/pimoroni/enviro/blob/main/documentation/getting-started.md
+* https://github.com/tspannhw/Flow-SGP30-MLX90640
+* https://hazecam.net/
+* https://community.cloudera.com/t5/Community-Articles/Tracking-Air-Quality-with-HDP-and-HDF-Part-1-Apache-NiFi/ta-p/248265
+* https://github.com/tspannhw/flank-airquality
+* https://www.slideshare.net/HostedbyConfluent/lets-monitor-conditions-at-the-conference-with-timothy-spann-david-kjerrumgaard-current-2022
+* https://dev.to/tspannhw/analyzing-wood-burning-stoves-with-flank-stack-minifi-flink-nifi-kafka-kudu-36on
+* https://www.datainmotion.dev/2019/10/tracking-air-quality-with-apache-nifi.html
+* https://patch.com/new-jersey/livingston/nj-cops-get-smoke-burning-odor-calls-due-canadian-wildfires
+* https://www.northjersey.com/story/news/health/2023/06/06/nj-air-quality-alert-canadian-wildfire-orange-alert-meaning/70292795007/
+* https://dev.to/tspannhw/tracking-air-quality-with-apache-nifi-cloudera-data-science-workbench-pyspark-and-parquet-28c
+* https://www.airnow.gov//
+* https://www.airnow.gov/aqi/aqi-basics/extremely-high-levels-of-pm25/
