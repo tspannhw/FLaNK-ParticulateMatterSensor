@@ -33,10 +33,62 @@ PMS5003 Particulate Matter Sensor with Cable
 
 ### Enviro+ Data Stream
 
+````
+
+ {
+  "uuid" : "air_uuid_kbr_20230608132527",
+  "amplitude100" : 1.0,
+  "amplitude500" : 0.3,
+  "amplitude1000" : 0.2,
+  "lownoise" : 0.4,
+  "midnoise" : 0.2,
+  "highnoise" : 0.3,
+  "amps" : 0.3,
+  "ipaddress" : "192.168.1.188",
+  "host" : "rp4",
+  "host_name" : "rp4",
+  "macaddress" : "a6:e0:87:04:1a:75",
+  "systemtime" : "2023-06-08T09:25:28.895187",
+  "endtime" : "1686230728.89",
+  "runtime" : "625.63",
+  "starttime" : "06/08/2023 09:15:02",
+  "cpu" : 0.3,
+  "cpu_temp" : "53.5",
+  "diskusage" : "29329.2 MB",
+  "memory" : 5.8,
+  "id" : "20230608132527_337aa313-278b-43d5-a4fd-6d39a8840822",
+  "temperature" : "36.7",
+  "adjtemp" : "29.4",
+  "adjtempf" : "64.9",
+  "temperaturef" : "78.1",
+  "pressure" : 1003.2,
+  "humidity" : 15.6,
+  "lux" : 89.8,
+  "proximity" : 0,
+  "oxidising" : 76.2,
+  "reducing" : 140.8,
+  "nh3" : 50.9,
+  "gasKO" : "Oxidising: 76188.84 Ohms\nReducing: 140805.11 Ohms\nNH3: 50944.44 Ohms",
+  "pm25" : 183,
+  "pm1" : 92,
+  "pm10" : 195,
+  "pm1atmos" : 60,
+  "pm25atmos" : 121,
+  "pm10atmos" : 129,
+  "pmper1l03" : 15588,
+  "pmper1l05" : 4565,
+  "pmper1l1" : 1324,
+  "pmper1l25" : 128,
+  "pmper1l5" : 16,
+  "pmper1l10" : 9
+}
+
+````
 
 ### Hardware - Tiny
 
 Enviro Urban (Pico W Aboard) 
+
 * PMS5003I
 * Pico/RP2040
 * BME280
@@ -56,6 +108,11 @@ Enviro Urban (Pico W Aboard)
 |PM10|`pm10`|micrograms per cubic metre|µg/m³|`2`|
 |Voltage|`voltage`|volts|V|`4.035`|
 
+````
+
+{"readings": {"pressure": 1002.28, "pm2_5": 154, "pm10": 160, "noise": 1.51, "humidity": 31.86, "temperature": 25.95, "pm1": 82}, "nickname": "flankurban", "timestamp": "2023-06-08 20:03:09"}
+
+````
 
 ### Resources
 
