@@ -15,6 +15,10 @@ https://github.com/tspannhw/FLaNK-Edge
 select systemtime, adjtempf, humidity, gasKO, pm25, pm1, pm10, pm1atmos, pm25atmos, pm10atmos, oxidising, nh3
 from `sr1`.`default_database`.`particles`
 
+select systemtime,  max(pm25) as maxpm25, max(pm1) as maxpm1, max(pm10) as maxpm10, max(nh3) as maxnh3, 
+                    min(pm25) as minpm25, min(pm1) as minpm1, min(pm10) as minpm10, min(nh3) as minnh3
+from `sr1`.`default_database`.`particles`
+
 ````
 
 ### Hardware - Small
