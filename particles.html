@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Particles - FLaNK Stack with MiNiFi, NiFi, Kafka, Flink, Materialize View HTML</title>
+<link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+</head>
+<body bgcolor="white" text="black">
+
+<div style="font-size: 30; font-weight: bold; font-family: sans-serif;">
+    <p>
+        <strong><b>MiNiFi/NiFi/Kafka/Flink - Data Tables - PM2.5+</b></strong>
+     </p>
+         <img height="300" width="800" src="https://github.com/tspannhw/FLaNK-ParticulateMatterSensor/blob/main/images/enviroparticles.png?raw=true">
+</div>
+<br>
+<table id="pmtable" class="display" style="width:100%; text-align:left;">
+        <thead>
+            <tr>
+                       <th valign="left"><b>oxidising</b></th>
+                       <th valign="left"><b>nh3</b></th>
+                       <th valign="left"><b>PM 1.0 AQI</b></th>
+                       <th valign="left"><b>PM 2.5 AQI</b></th>
+                       <th valign="left"><b>PM 10 AQI</b></th>
+                       <th valign="left"><b>pm1atmos</b></th>
+                       <th valign="left"><b>pm25atmos</b></th>
+                       <th valign="left"><b>pm10atmos</b></th>
+                       <th valign="left"><b>Humidity</b></th>
+                       <th valign="left"><b>SystemTime</b></th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                       <th valign="left"><b>oxidising</b></th>
+                       <th valign="left"><b>nh3</b></th>
+                       <th valign="left"><b>PM 1.0 AQI</b></th>
+                       <th valign="left"><b>PM 2.5 AQI</b></th>
+                       <th valign="left"><b>PM 10 AQI</b></th>
+                       <th valign="left"><b>pm1atmos</b></th>
+                       <th valign="left"><b>pm25atmos</b></th>
+                       <th valign="left"><b>pm10atmos</b></th>
+                       <th valign="left"><b>Humidity</b></th>
+                       <th valign="left"><b>SystemTime</b></th>
+            </tr>
+        </tfoot>
+    </table>
+<script>
+function isEmpty(val){
+    return (val === undefined || val == null || val.length <= 0) ? true : false;
+}
+function IsJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+$(document).ready(function() {
+    var t = $('#pmtable').DataTable();
+$.getJSON('http://localhost:18131/api/v1/query/5209/particles?key=2ad6ae52-7577-4ce1-a166-412da394fa7b', 
+    function(data) {
+      $.each( data, function( key, val ) {
+        console.log( data[key].uuid );
+
+        var oxidising= "";
+        if ( !isEmpty(data[key].oxidising) ) {
+            oxidising = data[key].oxidising;
+        }
+        var nh3= "";
+        if ( !isEmpty(data[key].nh3) ) {
+            nh3 = data[key].nh3;
+        }
+        var pm1= "";
+        if ( !isEmpty(data[key].pm1) ) {
+            pm1 = data[key].pm1;
+        }
+        var pm25= "";
+        if ( !isEmpty(data[key].pm25) ) {
+            pm25 = data[key].pm25;
+        }
+        var pm10= "";
+        if ( !isEmpty(data[key].pm10) ) {
+            pm10 = data[key].pm10;
+        }
+        var pm1atmos= "";
+        if ( !isEmpty(data[key].pm1atmos) ) {
+            pm1atmos = data[key].pm1atmos;
+        }
+        var pm25atmos= "";
+        if ( !isEmpty(data[key].pm25atmos) ) {
+            pm25atmos = data[key].pm25atmos;
+        }
+        var pm10atmos= "";
+        if ( !isEmpty(data[key].pm10atmos) ) {
+            pm10atmos = data[key].pm10atmos;
+        }
+        var humidity= "";
+        if ( !isEmpty(data[key].humidity) ) {
+            humidity = data[key].humidity;
+        }
+        var systemtime= "";
+        if ( !isEmpty(data[key].systemtime) ) {
+            systemtime = data[key].systemtime;
+        }
+
+        t.row.add( [ oxidising,nh3,pm1,pm25,
+                     pm10,pm1atmos,pm25atmos,pm10atmos,
+                     humidity, systemtime ]).draw(true);
+      });
+    });
+}); 
+</script>
+<p>
+<br>
+</p>
+<p><br></p><br>
+&copy; 2021-2022-2023 Tim Spann @PaasDev - datainmotion.dev
+<br>           
+</body>
+</html>
